@@ -1,0 +1,24 @@
+{
+  "name": "cuarto-proyecto",
+  "version": "1.0.0",
+  "description": "Proyecto de festival de musica",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yuli-Ramirez-02/Cuarto-proyecto.git"
+  },
+  "keywords": [
+    "SASS",
+    "NPM",
+    "Gulp"
+  ],
+  "author": "Yuli Ramirez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yuli-Ramirez-02/Cuarto-proyecto/issues"
+  },
+  "homepage": "https://github.com/Yuli-Ramirez-02/Cuarto-proyecto#readme"
+}
