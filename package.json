@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "Proyecto de festival de musica",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "sass": "sass --watch src/scss:build/css",
+    "dev": "gulp"
   },
   "repository": {
     "type": "git",
@@ -20,5 +22,10 @@
   "bugs": {
     "url": "https://github.com/Yuli-Ramirez-02/Cuarto-proyecto/issues"
   },
-  "homepage": "https://github.com/Yuli-Ramirez-02/Cuarto-proyecto#readme"
+  "homepage": "https://github.com/Yuli-Ramirez-02/Cuarto-proyecto#readme",
+  "devDependencies": {
+    "gulp": "^5.0.0",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.78.0"
+  }
 }
