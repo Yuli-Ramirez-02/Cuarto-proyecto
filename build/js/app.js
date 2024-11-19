@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
     navegacionFija()
     crearGaleria()
+    resaltarEnlace()
+    scrollNav()
 }) 
 
 function navegacionFija() {
@@ -12,8 +14,7 @@ function navegacionFija() {
             header.classList.add('fixed')
         } else {
             header.classList.remove('fixed')
-        }
-        
+        } 
     })
 }
 
@@ -72,3 +73,45 @@ function cerrarModal() {
         body.classList.remove('overflow-hidden')
     },500);
 }
+
+function resaltarEnlace() {
+    document.addEventListener('scroll', function () {
+        const sections = document.querySelectorAll('section')
+        const navLinks = document.querySelectorAll('.navegacion-principal a')
+        
+        let actual = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop
+            const sectionHeigth = section.clientHeight
+    
+            if(window.scrollY >= (sectionTop - sectionHeigth / 2)) {
+                actual = section.id
+            }
+        })
+
+        navLinks.forEach(link => {
+            
+            if (link.getAttribute('href') === '#' + actual) {
+                link.classList.add('active')
+            } else {
+                link.classList.remove('active')
+            }
+        })
+    })
+}
+
+function scrollNav() {
+    const navLinks = document.querySelectorAll('.navegacion-principal a')
+
+    navLinks.forEach( link => {
+        link.addEventListener('click', e => {
+            e.preventDefault()
+
+            const sectionScroll = e.target.getAttribute('href')
+            const section = document.querySelector(sectionScroll)
+
+            section.scrollIntoView({behavior: 'smoot'})
+        })
+    })
+}
+
